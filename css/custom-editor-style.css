@@ -9333,6 +9333,9 @@ body {
 body {
   background-color: #000; }
 
+#countdownLogo {
+  max-width: 500px; }
+
 .flip-clock-divider .flip-clock-label {
   display: none; }
 

@@ -29,7 +29,14 @@
       <div class="container-fluid text-center" tabindex="-1">
         <div class = "row">
             <div class = "col-sm-12 text-center">
-              <img class = "mx-auto d-block" src="http://via.placeholder.com/500x500?text=Rise+Up+Logo" alt="Rise Up IV Logo">
+
+              <?php $image = get_field('logo');
+                if( empty($image) ): ?>
+                <img class = "mx-auto d-block" src="http://via.placeholder.com/500x500?text=Rise+Up+Logo" alt="Rise Up IV Logo">
+              <?php elseif( !empty($image) ): ?>
+                <img id = "countdownLogo" class = "mx-auto d-block" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                <?php endif; ?>
+              
               <div class ="clock mt-5 d-inline-block" style = "width: auto;"></div>
               <div id="showtime"></div>
             </div>
@@ -42,7 +49,7 @@
 <?php wp_footer(); ?>
 
 <script type="text/javascript">
-  var date = new Date("March 21, 2018 17:00:00");
+  var date = new Date("March 28, 2018 17:00:00");
   var now = new Date();
   var diff = (date.getTime()/1000) - (now.getTime()/1000);
 
