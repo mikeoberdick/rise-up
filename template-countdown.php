@@ -41,7 +41,7 @@
               <div id="showtime">
                 <div class="showtimeContainer">
                   <h1>IT'S SHOWTIME!</h1>
-                  <h3>Live streaming now at <a href = "https://www.facebook.com/riseupseymour/"><i class="fab fa-facebook mr-1"></i>/riseupseymour</a></h3>
+                  <h3>Live streaming now at <a href = "https://www.facebook.com/riseupseymour/videos/414726145617423/"><i class="fab fa-facebook mr-1"></i>/riseupseymour</a></h3>
                 </div>
               </div>
             </div>
