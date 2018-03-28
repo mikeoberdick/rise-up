@@ -9339,6 +9339,35 @@ body {
 .flip-clock-divider .flip-clock-label {
   display: none; }
 
+.flip-clock-wrapper .up {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.hideCountdown {
+  display: none !important; }
+
+#showtime {
+  margin-top: 1rem;
+  display: none; }
+  #showtime .showtimeContainer {
+    border: solid 3px white;
+    padding: 25px;
+    display: inline-block; }
+    #showtime .showtimeContainer h1 {
+      color: #c3b24a;
+      font-family: 'Chicle', cursive;
+      font-size: 100px; }
+    #showtime .showtimeContainer h3 {
+      font-family: 'Abel', sans-serif;
+      font-size: 50px;
+      color: #ffffff; }
+    #showtime .showtimeContainer a {
+      color: white; }
+      #showtime .showtimeContainer a:hover {
+        text-decoration: none; }
+
 /*------------------------------------------------*/
 /*--------------------[SIDEBAR]-------------------*/
 /*------------------------------------------------*/

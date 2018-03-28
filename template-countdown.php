@@ -32,13 +32,18 @@
 
               <?php $image = get_field('logo');
                 if( empty($image) ): ?>
-                <img class = "mx-auto d-block" src="http://via.placeholder.com/500x500?text=Rise+Up+Logo" alt="Rise Up IV Logo">
+                <img class = "mx-auto d-block mt-5" src="http://via.placeholder.com/500x500?text=Rise+Up+Logo" alt="Rise Up IV Logo">
               <?php elseif( !empty($image) ): ?>
-                <img id = "countdownLogo" class = "mx-auto d-block" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                <img id = "countdownLogo" class = "mx-auto d-block mt-5" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                 <?php endif; ?>
               
               <div class ="clock mt-5 d-inline-block" style = "width: auto;"></div>
-              <div id="showtime"></div>
+              <div id="showtime">
+                <div class="showtimeContainer">
+                  <h1>IT'S SHOWTIME!</h1>
+                  <h3>Live streaming now at <a href = "https://www.facebook.com/riseupseymour/"><i class="fab fa-facebook mr-1"></i>/riseupseymour</a></h3>
+                </div>
+              </div>
             </div>
         </div><!-- .row -->  
       </div><!-- .container-fluid -->
@@ -49,7 +54,7 @@
 <?php wp_footer(); ?>
 
 <script type="text/javascript">
-  var date = new Date("March 28, 2018 17:00:00");
+  var date = new Date("March 28, 2018 18:30:00");
   var now = new Date();
   var diff = (date.getTime()/1000) - (now.getTime()/1000);
 
@@ -58,8 +63,8 @@
       countdown: true,
       callbacks: {
           stop: function() {
-          jQuery('.clock').addClass("hideCountdown");
-          jQuery('.clock').html("It's Showtime!");
+          jQuery('.clock').addClass('hideCountdown');
+          jQuery('#showtime').fadeToggle('slow');
         }
       }
   });
